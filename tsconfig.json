@@ -6,9 +6,10 @@
     "module": "ESNext",
     "lib": ["ES2022", "DOM", "DOM.Iterable"],
     "types": [
-        "./worker-configuration.d.ts",
-        "node",
-        "vite/client"
+      "./worker-configuration.d.ts",
+      "node",
+      "vite/client",
+      "vinxi/types/client"
     ],
 
     /* Bundler mode */
@@ -16,6 +17,10 @@
     "allowImportingTsExtensions": true,
     "verbatimModuleSyntax": false,
     "noEmit": true,
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "moduleDetection": "force",
 
     /* Linting */
     "skipLibCheck": true,
