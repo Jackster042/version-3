@@ -14,7 +14,7 @@
     {
       "binding": "HYPERDRIVE",
       "id": "f59236cef7e44394aeae0a940c367c85",
-      "localConnectionString": "postgresql://neondb_owner:npg_f76vLAdgMHjZ@ep-divine-heart-agyhk4a5.c-2.eu-central-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require"
+      "localConnectionString": process.env.DATABASE_URL!
     }
   ],
   "assets": {
