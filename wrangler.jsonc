@@ -14,7 +14,7 @@
     {
       "binding": "HYPERDRIVE",
       "id": "f59236cef7e44394aeae0a940c367c85",
-      "localConnectionString": process.env.DATABASE_URL!
+      "localConnectionString": ""
     }
   ],
   "assets": {
