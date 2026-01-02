@@ -1,0 +1,20 @@
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: local_postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: version-3
+    ports:
+      - "5432:5432"
+
+  wsproxy: # Required for Neon-style serverless driver local dev
+    image: ghcr.io/neondatabase/wsproxy:latest
+    environment:
+      APPEND_PORT: "db:5432"
+      ALLOW_ADDR_REGEX: ".*"
+    ports:
+      - "5433:80"
+    depends_on:
+      - db

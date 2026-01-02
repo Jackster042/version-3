@@ -1,0 +1,5 @@
+rules:
+  - id: no-hardcoded-secrets
+    pattern: 'const key = "..."'
+    message: "Use env variables!"
+    severity: ERROR
